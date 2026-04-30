@@ -4,7 +4,7 @@
 // @description     Move the primary taskbar (tray icons, notifications, action center) to any monitor via settings, click, or keyboard shortcut. Fork of taskbar-primary-on-secondary-monitor by m417z.
 // @version         1.0.0
 // @author          TheSakyo, m417z
-// @github          https://github.com/TheSakyo
+// @github          https://github.com/TheSakyo/Windhawk-Mod-Taskbar-Monitor-Switcher-Fork-of-m417z
 // @include         explorer.exe
 // @include         ShellHost.exe
 // @architecture    x86-64
