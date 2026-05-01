@@ -1,7 +1,8 @@
 # Taskbar Monitor Switcher
 
 > **Fork** of [Primary taskbar on secondary monitor](https://windhawk.net/mods/taskbar-primary-on-secondary-monitor) 
-> by **m417z**.\n
+> by **m417z**.
+> </br>
 > All original features are preserved; a **keyboard shortcut** has been added.
 >
 > 📂 **Included in [Windhawk Mods Collection](https://github.com/TheSakyo/windhawk-mods)**
