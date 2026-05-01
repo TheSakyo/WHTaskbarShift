@@ -4,7 +4,7 @@
 // @description     Move the primary taskbar (tray icons, notifications, action center) to any monitor via settings, click, or keyboard shortcut. Fork of taskbar-primary-on-secondary-monitor by m417z.
 // @version         1.0.0
 // @author          TheSakyo, m417z
-// @github          https://github.com/TheSakyo/Windhawk-Mod-Taskbar-Monitor-Switcher-Fork-of-m417z
+// @github          https://github.com/TheSakyo
 // @include         explorer.exe
 // @include         ShellHost.exe
 // @architecture    x86-64
@@ -1453,7 +1453,7 @@ bool HookExplorerPatcherSymbols(HMODULE explorerPatcherModule) {
     /*
      * Define the list of symbols to intercept within the ExplorerPatcher module
      */
-    EXPLORER_PATCHER_HOOK hooks[] = {
+    EXPLORER_PATCHER_HOOK explorerPatcherHooks[] = {
         {
             // The specific mangled name for the TrayUI::_SetStuckMonitor method
             R"(?_SetStuckMonitor@TrayUI@@QEAAJPEAUHMONITOR__@@@Z)",
@@ -1472,7 +1472,7 @@ bool HookExplorerPatcherSymbols(HMODULE explorerPatcherModule) {
     /*
      * Iterate through each defined hook to locate and intercept the symbols
      */
-    for(const auto& hook : hooks) {
+    for(const auto& hook : explorerPatcherHooks) {
 
         // Retrieve the memory address of the symbol from the loaded module
         void* ptr = (void*)GetProcAddress(explorerPatcherModule, hook.symbol);
