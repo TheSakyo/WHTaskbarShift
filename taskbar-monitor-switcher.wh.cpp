@@ -1783,8 +1783,7 @@ bool HookTaskbarSymbols() {
     /* Define the list of taskbar-related symbols to be hooked */
     /***********************************************************/
   
-    // explorer.exe
-    // taskbar.dll
+    // explorer.exe, taskbar.dll
     WindhawkUtils::SYMBOL_HOOK explorer_hooks[] = {
         {
             /*
