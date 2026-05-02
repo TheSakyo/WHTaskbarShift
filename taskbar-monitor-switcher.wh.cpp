@@ -1657,9 +1657,11 @@ HMODULE GetTaskbarViewModuleHandle() {
  */
 bool HookTaskbarViewDllSymbols(HMODULE module) {
     
-    /*
-     * Define the list of symbols to be hooked within the module
-     */
+    /*************************************************************/
+    /* Define the list of symbols to be hooked within the module */
+    /*************************************************************/
+  
+    // Taskbar.View.dll
     WindhawkUtils::SYMBOL_HOOK taskbarViewDllHooks[] = {
         {
             /*
@@ -1777,9 +1779,12 @@ bool HookTaskbarSymbols() {
         }
     }
 
-    /*
-     * Define the list of taskbar-related symbols to be hooked
-     */
+    /***********************************************************/
+    /* Define the list of taskbar-related symbols to be hooked */
+    /***********************************************************/
+  
+    // explorer.exe
+    // taskbar.dll
     WindhawkUtils::SYMBOL_HOOK explorerExeTaskbarDllHooks[] = {
         {
             /*
@@ -1842,9 +1847,11 @@ bool HookHardwareConfirmatorSymbols() {
         return false;
     }
 
-    /*
-     * Define the list of symbols to be hooked for popup positioning
-     */
+    /*****************************************************************/
+    /* Define the list of symbols to be hooked for popup positioning */
+    /*****************************************************************/
+
+    // Windows.Internal.HardwareConfirmator.dll
     WindhawkUtils::SYMBOL_HOOK hardwareConfirmatorDllHooks[] = {
         {
             /*
