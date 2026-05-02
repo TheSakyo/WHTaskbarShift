@@ -1660,7 +1660,7 @@ bool HookTaskbarViewDllSymbols(HMODULE module) {
     /*
      * Define the list of symbols to be hooked within the module
      */
-    WindhawkUtils::SYMBOL_HOOK symbolHooks[] = {
+    WindhawkUtils::SYMBOL_HOOK taskbarViewDllHooks[] = {
         {
             /*
              * Windows 11 XAML TaskbarFrame OnPointerPressed override
@@ -1680,7 +1680,7 @@ bool HookTaskbarViewDllSymbols(HMODULE module) {
     /*
      * Finalize the symbol hooking process by logging any errors
      */
-    if(!HookSymbols(module, symbolHooks, ARRAYSIZE(symbolHooks))) {
+    if(!HookSymbols(module, taskbarViewDllHooks, ARRAYSIZE(taskbarViewDllHooks))) {
 
         // Log the specific failure to the Windhawk console
         Wh_Log(L"HookTaskbarViewDllSymbols: HookSymbols failed");
@@ -1780,7 +1780,7 @@ bool HookTaskbarSymbols() {
     /*
      * Define the list of taskbar-related symbols to be hooked
      */
-    WindhawkUtils::SYMBOL_HOOK symbolHooks[] = {
+    WindhawkUtils::SYMBOL_HOOK explorerExeTaskbarDllHooks[] = {
         {
             /*
              * TrayUI::_SetStuckMonitor signatures for Windows 10 and 11
@@ -1804,7 +1804,7 @@ bool HookTaskbarSymbols() {
     /*
      * Finalize the symbol hooking process by logging any errors
      */
-    if(!HookSymbols(module, symbolHooks, ARRAYSIZE(symbolHooks))) {
+    if(!HookSymbols(module, explorerExeTaskbarDllHooks, ARRAYSIZE(explorerExeTaskbarDllHooks))) {
 
         // Log the specific failure to the Windhawk console
         Wh_Log(L"HookTaskbarSymbols: HookSymbols failed");
@@ -1845,7 +1845,7 @@ bool HookHardwareConfirmatorSymbols() {
     /*
      * Define the list of symbols to be hooked for popup positioning
      */
-    WindhawkUtils::SYMBOL_HOOK symbolHooks[] = {
+    WindhawkUtils::SYMBOL_HOOK hardwareConfirmatorDllHooks[] = {
         {
             /*
              * Windows Internal HardwareConfirmator GetPositionRect override
@@ -1865,7 +1865,7 @@ bool HookHardwareConfirmatorSymbols() {
     /*
      * Finalize the symbol hooking process by logging any errors
      */
-    if(!HookSymbols(module, symbolHooks, ARRAYSIZE(symbolHooks))) {
+    if(!HookSymbols(module, hardwareConfirmatorDllHooks, ARRAYSIZE(hardwareConfirmatorDllHooks))) {
 
         // Log the specific failure to the Windhawk console
         Wh_Log(L"HookHardwareConfirmatorSymbols: HookSymbols failed");
